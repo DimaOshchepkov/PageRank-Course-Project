@@ -94,7 +94,8 @@ class ReadFromPandasToTransition():
             data: pd.DataFrame,
             source: str, target: str,
             edge_attr: str,
-            personalization: Optional[Any] = None) -> Tuple[sparse.csr_matrix,
+            personalization: Optional[Any] = None,
+            directional: bool = False) -> Tuple[sparse.csr_matrix,
                                                             sparse.csr_matrix,
                                                             MappingIntToObject]:
         """ Создает объект Tuple[sparse.csr_matrix,sparse.csr_matrix,MappingIntToObject]
@@ -132,7 +133,8 @@ class ReadFromPandasToTransition():
                                         shape=(count_top, count_top))
 
         # Для неориентированного графа
-        transition_matrix += transition_matrix.transpose() 
+        if directional:
+            transition_matrix += transition_matrix.transpose() 
         transition_matrix_csr = transition_matrix.tocsr()
         
         row_sums = transition_matrix_csr.sum(axis=1)

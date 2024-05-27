@@ -190,7 +190,8 @@ class PagerankFactory():
             data: pd.DataFrame,
             source: str, target: str,
             edge_attr: str,
-            personalization: Optional[Any] = None) -> PageRank:
+            personalization: Optional[Any] = None,
+            directional: bool = False) -> PageRank:
         """ Создает объект PageRank из данных Pandas DataFrame.
 
         Args:
@@ -212,7 +213,8 @@ class PagerankFactory():
                 source,
                 target,
                 edge_attr,
-                personalization)
+                personalization,
+                directional)
             
         return PageRank(
             transition_matrix_csr,

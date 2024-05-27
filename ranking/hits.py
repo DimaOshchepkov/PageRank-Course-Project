@@ -82,7 +82,8 @@ class HITSFactory():
             data: pd.DataFrame,
             source: str, target: str,
             edge_attr: str,
-            personalization: Optional[Any] = None) -> HITS:
+            personalization: Optional[Any] = None,
+            directional: bool = False) -> HITS:
         """ Создает объект HITS из данных Pandas DataFrame.
 
         Args:
@@ -104,7 +105,8 @@ class HITSFactory():
                 source,
                 target,
                 edge_attr,
-                personalization)
+                personalization,
+                directional)
             
         return HITS(
             transition_matrix_csr,
