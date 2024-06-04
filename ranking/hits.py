@@ -2,6 +2,7 @@ from pathlib import Path
 from typing import Any, Optional, Tuple
 import pandas as pd
 from scipy import sparse
+import scipy
 from .common import (ReadFromTxtToTransition, split_by_target_column_value,
                      BaseGraphContext,
                      ReadFromPandasToTransition,
@@ -53,28 +54,32 @@ class HITS():
                        user_rank_vec: sparse.csr_matrix,
                        max_iter: int) -> Tuple[np.ndarray, np.ndarray]:
         
+        
+        # transition_T = transition_matrix.transpose()
+        # hub = user_rank_vec.copy()
+        # auth = user_rank_vec.copy()
 
-        transition_T = transition_matrix.transpose()
-        hub = user_rank_vec.copy()
-        auth = user_rank_vec.copy()
-
-        # Update the PageRank vector until convergence! Our convergence criterion is to see whether
-        # the magnitude of the difference of the PageRank vector after an update is 0
-        for i in tqdm(range(max_iter)):
-            # (deep) copy the current PageRank vector to compare with the updated vector
+        # # Update the PageRank vector until convergence! Our convergence criterion is to see whether
+        # # the magnitude of the difference of the PageRank vector after an update is 0
+        # for i in tqdm(range(max_iter)):
+        #     # (deep) copy the current PageRank vector to compare with the updated vector
             
-            old_hub = hub.copy() 
-            old_auth = auth.copy()
+        #     old_hub = hub.copy() 
+        #     old_auth = auth.copy()
                    
-            old_hub /= old_hub.sum()
-            old_auth /= old_auth.sum()
+        #     old_hub /= old_hub.sum()
+        #     old_auth /= old_auth.sum()
             
-            # Update!
-            hub = sparse.csr_matrix(transition_matrix.multiply(old_auth.T).sum(axis=1))
-            auth = sparse.csr_matrix(transition_T.multiply(old_hub.T).sum(axis=1))
-                                
-
-        return auth.toarray().flatten(), hub.toarray().flatten()
+        #     # Update!
+        #     hub = sparse.csr_matrix(transition_matrix.multiply(old_auth.T).sum(axis=1))
+        #     auth = sparse.csr_matrix(transition_T.multiply(old_hub.T).sum(axis=1))
+        _, _, vt = scipy.sparse.linalg.svds(transition_matrix, k=1, maxiter=max_iter)
+        a = vt.flatten().real
+        h = transition_matrix @ a                    
+        h /= h.sum()
+        a /= a.sum()
+        
+        return a.flatten(), h.flatten()
     
 class HITSFactory():
     
