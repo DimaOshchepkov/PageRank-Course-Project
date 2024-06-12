@@ -36,10 +36,10 @@
   },
   "benchmarks": [
     {
-      "name": "BM_Pagårank_MovieLens/sample-0.10/iterations:3",
+      "name": "BM_Pagerank_MovieLens/sample-0.10/iterations:3",
       "family_index": 0,
       "per_family_instance_index": 0,
-      "run_name": "BM_Pagårank_MovieLens/sample-0.10/iterations:3",
+      "run_name": "BM_Pagerank_MovieLens/sample-0.10/iterations:3",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
@@ -64,10 +64,10 @@
       "time_unit": "s"
     },
     {
-      "name": "BM_Pagårank_MovieLens/sample-0.20/iterations:3",
+      "name": "BM_Pagerank_MovieLens/sample-0.20/iterations:3",
       "family_index": 2,
       "per_family_instance_index": 0,
-      "run_name": "BM_Pagårank_MovieLens/sample-0.20/iterations:3",
+      "run_name": "BM_Pagerank_MovieLens/sample-0.20/iterations:3",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
@@ -92,10 +92,10 @@
       "time_unit": "s"
     },
     {
-      "name": "BM_Pagårank_MovieLens/sample-0.30/iterations:3",
+      "name": "BM_Pagerank_MovieLens/sample-0.30/iterations:3",
       "family_index": 4,
       "per_family_instance_index": 0,
-      "run_name": "BM_Pagårank_MovieLens/sample-0.30/iterations:3",
+      "run_name": "BM_Pagerank_MovieLens/sample-0.30/iterations:3",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
@@ -120,10 +120,10 @@
       "time_unit": "s"
     },
     {
-      "name": "BM_Pagårank_MovieLens/sample-0.40/iterations:3",
+      "name": "BM_Pagerank_MovieLens/sample-0.40/iterations:3",
       "family_index": 6,
       "per_family_instance_index": 0,
-      "run_name": "BM_Pagårank_MovieLens/sample-0.40/iterations:3",
+      "run_name": "BM_Pagerank_MovieLens/sample-0.40/iterations:3",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
@@ -148,10 +148,10 @@
       "time_unit": "s"
     },
     {
-      "name": "BM_Pagårank_MovieLens/sample-0.50/iterations:3",
+      "name": "BM_Pagerank_MovieLens/sample-0.50/iterations:3",
       "family_index": 8,
       "per_family_instance_index": 0,
-      "run_name": "BM_Pagårank_MovieLens/sample-0.50/iterations:3",
+      "run_name": "BM_Pagerank_MovieLens/sample-0.50/iterations:3",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
@@ -176,10 +176,10 @@
       "time_unit": "s"
     },
     {
-      "name": "BM_Pagårank_MovieLens/sample-0.60/iterations:3",
+      "name": "BM_Pagerank_MovieLens/sample-0.60/iterations:3",
       "family_index": 10,
       "per_family_instance_index": 0,
-      "run_name": "BM_Pagårank_MovieLens/sample-0.60/iterations:3",
+      "run_name": "BM_Pagerank_MovieLens/sample-0.60/iterations:3",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
@@ -204,10 +204,10 @@
       "time_unit": "s"
     },
     {
-      "name": "BM_Pagårank_MovieLens/sample-0.70/iterations:3",
+      "name": "BM_Pagerank_MovieLens/sample-0.70/iterations:3",
       "family_index": 12,
       "per_family_instance_index": 0,
-      "run_name": "BM_Pagårank_MovieLens/sample-0.70/iterations:3",
+      "run_name": "BM_Pagerank_MovieLens/sample-0.70/iterations:3",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
@@ -232,10 +232,10 @@
       "time_unit": "s"
     },
     {
-      "name": "BM_Pagårank_MovieLens/sample-0.80/iterations:3",
+      "name": "BM_Pagerank_MovieLens/sample-0.80/iterations:3",
       "family_index": 14,
       "per_family_instance_index": 0,
-      "run_name": "BM_Pagårank_MovieLens/sample-0.80/iterations:3",
+      "run_name": "BM_Pagerank_MovieLens/sample-0.80/iterations:3",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
@@ -260,10 +260,10 @@
       "time_unit": "s"
     },
     {
-      "name": "BM_Pagårank_MovieLens/sample-0.90/iterations:3",
+      "name": "BM_Pagerank_MovieLens/sample-0.90/iterations:3",
       "family_index": 16,
       "per_family_instance_index": 0,
-      "run_name": "BM_Pagårank_MovieLens/sample-0.90/iterations:3",
+      "run_name": "BM_Pagerank_MovieLens/sample-0.90/iterations:3",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
@@ -288,10 +288,10 @@
       "time_unit": "s"
     },
     {
-      "name": "BM_Pagårank_MovieLens/sample-1.00/iterations:3",
+      "name": "BM_Pagerank_MovieLens/sample-1.00/iterations:3",
       "family_index": 18,
       "per_family_instance_index": 0,
-      "run_name": "BM_Pagårank_MovieLens/sample-1.00/iterations:3",
+      "run_name": "BM_Pagerank_MovieLens/sample-1.00/iterations:3",
       "run_type": "iteration",
       "repetitions": 1,
       "repetition_index": 0,
