@@ -5,6 +5,8 @@
 ## Быстрый старт
 Пример использования HITS ([подробнее](./handmaid_hits_result_demonsration.ipynb)):
 ```python
+from ranking import *
+
 df = pd.read_csv("path/to/dataframe")
 hits: HITS = HITSFactory().read_pd(data=data, source='userId', 
 target='movieId', edge_attr='rating', personalization=1)
@@ -24,6 +26,7 @@ print(prediction_movie_for_user1.sort_values(by='hubness', ascending=False).head
 
 Пример использования Pagerank ([подробнее](./handmaid_pagerank_result_demonsration.ipynb)):
 ```python
+from ranking import *
 
 pg = PagerankFactory().read_pd(data, 'userId', 'movieId', 'rating', 1)
 prediction_movie_for_user1 = pg.get_pagerank()
